@@ -1,9 +1,7 @@
 function validateForm()
 {
 	var validFirstName = false;
-	var FirstName = document.getElementById("FirstName").value;
 	var validLastName = false;
-	var LastName = document.getElementById("LastName").value;
 	var re = /^[A-Za-z]+$/; //regular expression to match only alphabetic characters
 	var validEmail = false;
 	var userEmail = document.getElementById("Email").value;
@@ -11,6 +9,7 @@ function validateForm()
 	var dotpos = userEmail.lastIndexOf(".");
 	var validPhone = false;
 	var phone = document.getElementById("Phone").value;
+	var validUsername = false;
 	var validPassword = false;
 	var errormsgs ="";
 	
@@ -49,6 +48,8 @@ function validateForm()
 			errormsgs += "<p>Password is required and must be no more than 7 characters.</p>";
 				else
 					validPassword = true;
+	
+	document.getElementById("errormsgs").innerHTML = errormsgs;
 	
 	return (validFirstName && validLastName && validEmail && validPhone && validUsername && validPassword);
 	}
