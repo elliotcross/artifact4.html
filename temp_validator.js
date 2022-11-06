@@ -1,4 +1,4 @@
-function validateForm(form)
+function validateForm()
 {
 	var validFirstName = false;
 	var FirstName = document.getElementById("FirstName").value;
