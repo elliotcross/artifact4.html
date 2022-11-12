@@ -4,7 +4,8 @@ function validateForm(form)
 	let x = document.forms["myForm"]["FirstName"].value;
 	let y = document.forms["myForm"]["LastName"].value;
 	let z = document.forms["myForm"]["EMail"].value;
-	if (x === "" || y === "" || z === "") {
+	let f = document.forms["myForm"]["Phone"].value;
+	if (x === "" || y === "" || z === "" || f === "") {
 		alert("Error: All fields are required");
 		return false;
 	}
