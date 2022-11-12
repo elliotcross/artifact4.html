@@ -32,11 +32,32 @@ function validateForm(form)
 		return false;
 	}
 
-//validation fails if first name input is not alphabetic characters
+//validation fails if last name input is not alphabetic characters
 	if(!re.test(y)) {
 		alert("Error: Names cannot contain numbers or symbols");
 		return false;
 	}
+	
+//validation fails if email is incorrect format
+	
+         atpos = z.indexOf("@");
+         dotpos = z.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter valid email");
+            return false;
+         }
+
+//validation fails if phone is non-numeric characters or more than 15 characters
+	
+//validation fails if username is longer than 12 characters
+	
+//validation fails if password is longer than 7 characters
+	
+//State required if Country is USA
+	
+//Zipcode required if Country is USA. Zipcode max 5 digits.
+
 	else return true;
 }
 
