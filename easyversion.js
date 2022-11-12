@@ -1,11 +1,15 @@
 function validateForm(form)
 {
-//validation fails if first or last name  input is blank
+//validation fails if input in any fields is blank
 	let x = document.forms["myForm"]["FirstName"].value;
 	let y = document.forms["myForm"]["LastName"].value;
 	let z = document.forms["myForm"]["EMail"].value;
 	let f = document.forms["myForm"]["Phone"].value;
-	if (x === "" || y === "" || z === "" || f === "") {
+	let g = document.forms["myForm"]["Username"].value;
+	let h = document.forms["myForm"]["Password"].value;
+	let k = document.forms["myForm"]["Address"].value;
+	let m = document.forms["myForm"]["Country"].value;
+	if (x === "" || y === "" || z === "" || f === "" || g === "" || h === "" || k === "" || m === "-1") {
 		alert("Error: All fields are required");
 		return false;
 	}
