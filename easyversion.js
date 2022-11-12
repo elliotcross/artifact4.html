@@ -26,8 +26,7 @@ function validateForm(form)
 		alert("Error: Last name cannot be more than 50 characters");
 		return false;
 	}
-//regular expression to match only alphabetic characters
-	var re = /^[A-Za-z]+$/;
+
 //validation fails if first name input is not alphabetic characters
 	if(!re.test(y)) {
 		alert("Error: Names cannot contain numbers or symbols");
