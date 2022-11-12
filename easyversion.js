@@ -1,9 +1,10 @@
 function validateForm(form)
 {
-//validation fails if first name input is blank
+//validation fails if first or last name  input is blank
 	let x = document.forms["myForm"]["FirstName"].value;
 	let y = document.forms["myForm"]["LastName"].value;
-	if (x === "" || y === "") {
+	let z = document.forms["myForm"]["EMail"].value;
+	if (x === "" || y === "" || z === "") {
 		alert("Error: All fields are required");
 		return false;
 	}
