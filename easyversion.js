@@ -2,8 +2,9 @@ function validateForm(form)
 {
 //validation fails if first name input is blank
 	let x = document.forms["myForm"]["FirstName"].value;
-	if (x == "") {
-		alert("Error: First name is required");
+	let y = document.forms["myForm"]["LastName"].value;
+	if (x === "" || y === "") {
+		alert("Error: All fields are required");
 		return false;
 	}
 //validation fails if first name input is longer than 20 characters
