@@ -51,7 +51,7 @@ function validateForm(form)
          }
 
 //validation fails if phone is non-numeric characters or more than 15 characters
-	if (isNaN(f) || f.length >15 || phone===null) {
+	if (isNaN(f) || f.length >15) {
 		alert("Error: Phone must contain numbers only, no more than 15 digits");
 		return false;
 	}
