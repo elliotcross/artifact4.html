@@ -4,7 +4,7 @@ function validateForm()
 	var validLastName = false;
 	var re = /^[A-Za-z]+$/; //regular expression to match only alphabetic characters
 	var validEmail = false;
-	var userEmail = document.getElementById("Email").value;
+	var userEmail = document.getElementById("EMail").value;
 	var atpos = userEmail.indexOf("@");
 	var dotpos = userEmail.lastIndexOf(".");
 	var validPhone = false;
