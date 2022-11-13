@@ -1,6 +1,8 @@
 #errormsgs {
     color:red;
 }
+fieldset {
+	width: 35%
 footer {
  padding:10px;
  }
