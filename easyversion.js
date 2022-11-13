@@ -9,9 +9,9 @@ function validateForm(form)
 	let h = document.forms["myForm"]["Password"].value;
 	let k = document.forms["myForm"]["Address"].value;
 	let m = document.forms["myForm"]["Country"].value;
-	let s = document.forms["myForm"]["State"].value;
-	let z = document.forms["myForm"]["Zipcode"].value;
-	if (x === "" || y === "" || z === "" || f === "" || g === "" || h === "" || k === "" || m === "-1") {
+
+
+	if (x === "" || y === "" || z === "" || f === "" || g === "" || h === "" || k === "" || m === "000") {
 		alert("Error: All fields are required");
 		return false;
 	}
@@ -52,7 +52,7 @@ function validateForm(form)
 
 //validation fails if phone is non-numeric characters or more than 15 characters
 	if (isNaN(f) || f.length > 15) {
-		alert("Error: Phone must contain numbers only, no more than 15 digits");
+		alert("Error: Phone must contain numbers only, no more than 15 characters");
 		return false;
 	}
 	
@@ -68,26 +68,6 @@ function validateForm(form)
 		return false;
 	}
 	
-//State required if Country is USA
-	if (m === "011" && s === "-1") {
-		alert("Please choose a state");
-		return false;
-	}
-	
-//Zipcode required if Country is USA. Zipcode max 5 digits.
-	if (m === "011" && z === "") {
-		alert("Zipcode required");
-		return false;
-	}
-	if (m === "011" && isNaN(z)) {
-		alert("Zipcode must be numbers only");
-		return false;
-	}
-	if (m === "011" && z.length != 5) {
-		alert("Zipcode must be 5 digits long");
-		return false;
-	}
 
 	else return true;
 }
-
